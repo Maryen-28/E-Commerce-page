@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopHub - Your Fashion Destination</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="loginScreen" class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h1>🛍️ ShopHub</h1>
+        <p id="authSubtitle">Welcome Back! Sign in to continue</p>
+      </div>
+      
+      <!-- Login Form -->
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="loginRole">Select Role</label>
+          <select id="loginRole" required>
+            <option value="customer">Customer</option>
+            <option value="staff">Staff</option>
+            <option value="admin">Admin</option>
+            <option value="rider">Delivery Rider</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter password" required>
+        </div>
+        
+        <button type="submit" class="btn-primary">Log In</button>
+        
+        <div class="auth-switch">
+          <p>Don't have an account? <button type="button" id="showSignup" class="link-btn">Sign Up</button></p>
+        </div>
+        
+        <div class="demo-credentials">
+          <p><strong>Demo Credentials:</strong></p>
+          <p>customer@shop.com / pass123</p>
+          <p>staff@shop.com / pass123</p>
+          <p>admin@shop.com / pass123</p>
+          <p>rider@shop.com / pass123</p>
+        </div>
+      </form>
+      
+      <!-- Sign Up Form -->
+      <form id="signupForm" class="login-form hidden">
+        <div class="form-group">
+          <label for="signupRole">I want to register as</label>
+          <select id="signupRole" required>
+            <option value="customer">Customer</option>
+            <option value="staff">Staff</option>
+            <option value="admin">Admin</option>
+            <option value="rider">Delivery Rider</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="signupPhone">Phone Number</label>
+          <input type="tel" id="signupPhone" placeholder="+63 912 345 6789" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="Create a password (min 6 characters)" required minlength="6">
+        </div>
+        
+        <div class="form-group">
+          <label for="signupConfirmPassword">Confirm Password</label>
+          <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required minlength="6">
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="agreeTerms" required>
+            <span>I agree to the Terms & Conditions and Privacy Policy</span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn-primary">Create Account</button>
+        
+        <div class="auth-switch">
+          <p>Already have an account? <button type="button" id="showLogin" class="link-btn">Log In</button></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main App -->
+  <div id="mainApp" class="hidden">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <button id="menuToggle" class="menu-toggle">☰</button>
+          <h1 class="logo">🛍️ ShopHub</h1>
+        </div>
+        
+        <div class="header-search">
+          <input type="search" id="searchInput" placeholder="Search for watches, bags, shoes, clothes...">
+          <button class="search-btn">🔍</button>
+        </div>
+        
+        <div class="header-right">
+          <button id="cartBtn" class="icon-btn customer-only">
+            🛒
+            <span id="cartBadge" class="badge">0</span>
+          </button>
+          
+          <button id="favoritesBtn" class="icon-btn customer-only" onclick="renderView('favorites')">
+            ❤️
+            <span id="favoritesBadge" class="badge hidden">0</span>
+          </button>
+          
+          <div id="loyaltyPoints" class="loyalty-display customer-only" onclick="renderView('loyalty')" style="cursor: pointer;">
+            ⭐ <span id="pointsValue">0</span> pts
+          </div>
+          
+          <button class="icon-btn" id="notificationBtn">
+            🔔
+            <span id="notificationBadge" class="badge hidden">0</span>
+          </button>
+          
+          <div class="user-menu">
+            <button id="userMenuBtn" class="user-avatar">
+              <span id="userInitial">U</span>
+            </button>
+            <div id="userDropdown" class="dropdown hidden">
+              <div class="dropdown-header">
+                <strong id="userName">User</strong>
+                <span id="userRole" class="role-badge">Customer</span>
+              </div>
+              <button id="logoutBtn" class="dropdown-item">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <nav id="sidebarNav" class="sidebar-nav">
+        <!-- Dynamic navigation -->
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="mainContent" class="main-content">
+      <!-- Dynamic content -->
+    </main>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
