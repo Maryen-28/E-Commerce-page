@@ -16,15 +16,9 @@ The UI includes authentication (login/signup), user-role selection, and a clean 
 - Clean UI / UX for user login and registration  
 - Starter layout for store / user dashboard after login  
 
-> *You can expand this README to include more features as you build them: product listing, cart, checkout, order history, admin panel, delivery tracking, etc.*
-
 ## 🛠️ Tech Stack
 
-_(You can adjust according to what you used — I'm guessing a modern web stack based on deployment)_
-
-- HTML5 / CSS3 / JavaScript  
-- (Optionally) React / Next.js / or other frontend framework  
-- (Optionally) Backend API or mock data for authentication & user roles  
+- HTML/ CSS / JavaScript  
 - Responsive design  
 
 ## 📥 Getting Started / Running Locally
