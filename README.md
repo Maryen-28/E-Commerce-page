@@ -25,4 +25,4 @@ The UI includes authentication (login/signup), user-role selection, and a clean 
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/YourUsername/your-shophub-repo.git
+   git clone https://github.com/Maryen-28/your-shophub-repo.git
